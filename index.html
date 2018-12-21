@@ -5,13 +5,19 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Your Website</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="minireset.min.css">
+    <title>Carousel Sample</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="minireset.min.css" />
+    <style></style>
     <style>
       html {
+        /*
         background-color: #5f45bb;
         background-image: linear-gradient(to bottom right, #180cac, #d054e4);
+        */
         color: #fff;
         font-family: "Quicksand", sans-serif;
         font-size: 16px;
@@ -23,58 +29,89 @@
         overflow-x: hidden;
         text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
       }
+
+      .container-wrapper {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 160px;
+      }
+
+      .container {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 8px;
+      }
+
+      .item {
+        font-size: 13px;
+        width: 112px;
+        color: #000;
+        flex-shrink: 0;
+        padding: 8px;
+      }
+      .item__img {
+        border-radius: 14px;
+      }
+      .item__title {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        height: 34px;
+        color: #54595d;
+      }
     </style>
   </head>
 
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li>Your menu</li>
-        </ul>
-      </nav>
-    </header>
-
-    <section>
-      <article>
-        <header>
-          <h2>Article title</h2>
-          <p>
-            Posted on
-            <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time>
-            by <a href="#">Writer</a> - <a href="#comments">6 comments</a>
-          </p>
-        </header>
-        <p>
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas.
-        </p>
-      </article>
-
-      <article>
-        <header>
-          <h2>Article title</h2>
-          <p>
-            Posted on
-            <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time>
-            by <a href="#">Writer</a> - <a href="#comments">6 comments</a>
-          </p>
-        </header>
-        <p>
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas.
-        </p>
-      </article>
-    </section>
-
-    <aside>
-      <h2>About section</h2>
-      <p>
-        Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae
-        est. Mauris placerat eleifend leo.
-      </p>
-    </aside>
-
-    <footer><p>Copyright 2009 Your name</p></footer>
+    <div class="container-wrapper">
+      <ul class="container">
+        <div class="item">
+          <img class="item__img" src="https://picsum.photos/200?image=0" />
+          <div class="item__title">音楽・カラオケ好き</div>
+        </div>
+        <div class="item">
+          <img class="item__img" src="https://picsum.photos/200?image=1" />
+          <div class="item__title">おしゃれ好きな人と出逢いたい。</div>
+        </div>
+        <div class="item">
+          <img class="item__img" src="https://picsum.photos/200?image=2" />
+          <div class="item__title">Lorem Ipsum...</div>
+        </div>
+        <div class="item">
+          <img class="item__img" src="https://picsum.photos/200?image=3" />
+          <div class="item__title">Lorem Ipsum...</div>
+        </div>
+        <div class="item">
+          <img class="item__img" src="https://picsum.photos/200?image=4" />
+          <div class="item__title">Lorem Ipsum...</div>
+        </div>
+        <div class="item">
+          <img class="item__img" src="https://picsum.photos/200?image=5" />
+          <div class="item__title">Lorem Ipsum...</div>
+        </div>
+        <div class="item">
+          <img class="item__img" src="https://picsum.photos/200?image=6" />
+          <div class="item__title">Lorem Ipsum...</div>
+        </div>
+        <div class="item">
+          <img class="item__img" src="https://picsum.photos/200?image=7" />
+          <div class="item__title">Lorem Ipsum...</div>
+        </div>
+        <div class="item">
+          <img class="item__img" src="https://picsum.photos/200?image=8" />
+          <div class="item__title">Lorem Ipsum...</div>
+        </div>
+        <div class="item">
+          <img class="item__img" src="https://picsum.photos/200?image=9" />
+          <div class="item__title">Lorem Ipsum...</div>
+        </div>
+        <div class="item">
+          <img class="item__img" src="https://picsum.photos/200?image=10" />
+          <div class="item__title">Lorem Ipsum...</div>
+        </div>
+      </ul>
+    </div>
   </body>
 </html>
