@@ -30,75 +30,6 @@
         text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
       }
 
-      h1 {
-        padding: 8px;
-        color: #000;
-      }
-
-      h2 {
-        padding: 8px;
-        color: #000;
-      }
-
-      .container-wrapper {
-        overflow-x: hidden;
-        overflow-y: hidden;
-        height: 161px;
-      }
-
-      .container {
-        display: flex;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        padding: 8px;
-      }
-
-      .another-container {
-        display: flex;
-        overflow-x: auto;
-        padding: 8px;
-      }
-
-      .item {
-        font-size: 13px;
-        width: 112px;
-        color: #000;
-        flex-shrink: 0;
-        padding: 8px;
-      }
-
-      .item__img {
-        border-radius: 14px;
-      }
-
-      .item__title {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        height: 34px;
-        color: #54595d;
-      }
-
-      .circle-container-wrapper {
-        overflow-x: hidden;
-        overflow-y: hidden;
-        height: 87px;
-      }
-
-      .item-circle {
-        font-size: 13px;
-        color: #000;
-        flex-shrink: 0;
-        padding: 8px;
-      }
-
-      .item__img-circle {
-        width: 56px;
-        height: 56px;
-        border-radius: 28px;
-      }
-
       .navigator-container {
         padding: 8px;
       }
@@ -107,153 +38,84 @@
         display: flex;
         justify-content: center;
       }
+
+      .scrolling-controller-container {
+        height: 10vh;
+      }
+
+      .scrolling-controller {
+        color: #000;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .scrolling-item {
+        width: calc(100% / 3);
+        position: relative;
+      }
+
+      .scrolling-item a {
+        text-align: center;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .scrolling-item a span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .scrolling-box {
+        background-color: #eaeaea;
+        display: flex;
+        height: 200px;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        text-align: center;
+        width: 100%;
+      }
+      .scrolling-box section {
+        height: 100%;
+        width: 100%;
+        flex-shrink: 0;
+      }
     </style>
   </head>
 
   <body>
     <nav class="navigator-container">
       <ul class="navigator">
-        <li class="navigator-item"><a href="./tab">tab</a></li>
+        <li class="navigator-item"><a href="./index.html">top</a></li>
       </ul>
     </nav>
-    <h1>Carousel Sample</h1>
-    <h2>-webkit-overflow-scrolling: touch</h2>
-    <div class="container-wrapper">
-      <ul class="container">
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=0" />
-          <div class="item__title">音楽・カラオケ好き</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=1" />
-          <div class="item__title">おしゃれ好きな人と出逢いたい。</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=2" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=3" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=4" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=5" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=6" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=7" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=8" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=9" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=10" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-      </ul>
-    </div>
 
-    <h2>-webkit-overflow-scrolling: なし</h2>
-    <div class="container-wrapper">
-      <ul class="another-container">
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=0" />
-          <div class="item__title">音楽・カラオケ好き</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=1" />
-          <div class="item__title">おしゃれ好きな人と出逢いたい。</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=2" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=3" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=4" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=5" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=6" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=7" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=8" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=9" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
-        <div class="item">
-          <img class="item__img" src="https://picsum.photos/200?image=10" />
-          <div class="item__title">Lorem Ipsum...</div>
-        </div>
+    <nav class="scrolling-controller-container">
+      <ul class="scrolling-controller">
+        <li class="scrolling-item">
+          <a href="#1"><span>1</span></a>
+        </li>
+        <li class="scrolling-item">
+          <a href="#2"><span>2</span></a>
+        </li>
+        <li class="scrolling-item">
+          <a href="#3"><span>3</span></a>
+        </li>
       </ul>
-    </div>
+    </nav>
 
-    <h2></h2>
-    <div class="circle-container-wrapper">
-      <ul class="container">
-        <div class="item-circle">
-          <img class="item__img-circle" src="https://picsum.photos/200?image=11" />
-        </div>
-        <div class="item-circle">
-          <img class="item__img-circle" src="https://picsum.photos/200?image=12" />
-        </div>
-        <div class="item-circle">
-          <img class="item__img-circle" src="https://picsum.photos/200?image=13" />
-        </div>
-        <div class="item-circle">
-          <img class="item__img-circle" src="https://picsum.photos/200?image=14" />
-        </div>
-        <div class="item-circle">
-          <img class="item__img-circle" src="https://picsum.photos/200?image=15" />
-        </div>
-        <div class="item-circle">
-          <img class="item__img-circle" src="https://picsum.photos/200?image=16" />
-        </div>
-        <div class="item-circle">
-          <img class="item__img-circle" src="https://picsum.photos/200?image=17" />
-        </div>
-        <div class="item-circle">
-          <img class="item__img-circle" src="https://picsum.photos/200?image=18" />
-        </div>
-        <div class="item-circle">
-          <img class="item__img-circle" src="https://picsum.photos/200?image=19" />
-        </div>
-        <div class="item-circle">
-          <img class="item__img-circle" src="https://picsum.photos/200?image=20" />
-        </div>
-        <div class="item-circle">
-          <img class="item__img-circle" src="https://picsum.photos/200?image=21" />
-        </div>
-      </ul>
+    <div class="scrolling-box">
+      <section id="1">This is the first section</section>
+      <section id="2">This is the second section</section>
+      <section id="3">This is the third section</section>
     </div>
   </body>
 </html>
